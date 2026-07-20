@@ -6,8 +6,6 @@ export default function UserLayout() {
 
     const { openedTab } = useAuthContext();
 
-    console.log(openedTab);
-
     return <main className="h-[90%] border-t border-neutral-800 flex items-start">
 
         <Sidebar />

@@ -12,6 +12,8 @@ function loadEnvVars(): Env {
   const DATABASE_URL = process.env.DATABASE_URL;
   const JWT_SECRET = process.env.JWT_SECRET;
 
+  console.log(process.env.HTTP_BACKEND_PORT);
+
   const result = envVarsSchema.safeParse({ HTTP_BACKEND_PORT, DATABASE_URL, JWT_SECRET });
 
   if (!result.success) {

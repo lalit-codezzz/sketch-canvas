@@ -1,14 +1,9 @@
 import { Navigate, useNavigate } from "react-router";
-import Loader from "./Loader";
 import { useAuthContext } from "../context/AuthContext";
 
 export default function Hero() {
 
-    const { isAuthenticated, isLoading, setIsAuthenticated, setToken } = useAuthContext();
-
-    if (isLoading) {
-        return <Loader />
-    }
+    const { isAuthenticated } = useAuthContext();
 
     if (isAuthenticated) {
         return <Navigate to="/user/dashboard" replace />
